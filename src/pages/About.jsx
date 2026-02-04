@@ -1,0 +1,52 @@
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
+export function About() {
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-12"
+        >
+            <div className="space-y-4">
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-gradient">About Me</h2>
+                <div className="h-1 w-20 bg-primary rounded-full" />
+            </div>
+
+            <div className="glass-panel p-8 rounded-3xl space-y-6 text-lg leading-relaxed text-muted-foreground">
+                <p>
+                    <strong className="text-foreground">Hello! I'm Krithika.</strong> I started my journey in tech with a simple curiosity about how things work on the web. That curiosity blossomed into a passion for building robust, scalable applications that not only function perfectly but also look stunning.
+                </p>
+                <p>
+                    With a background in both <span className="text-accent">Computer Science</span> and <span className="text-primary">Design</span>, I bridge the gap between engineering and aesthetics. I believe that the best software is invisible—it just works, and it feels natural to use.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new AI tools, contributing to open-source projects, or sketching new UI ideas in Figma. I'm constantly learning and evolving with the tech landscape.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-primary">
+                    <h3 className="text-xl font-bold mb-2">Design Philosophy</h3>
+                    <p className="text-muted-foreground">Minimalism with purpose. Every pixel should serve a function while delighting the user.</p>
+                </div>
+                <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-accent">
+                    <h3 className="text-xl font-bold mb-2">Engineering Approach</h3>
+                    <p className="text-muted-foreground">Clean, modular code. Performance is a feature, not an afterthought.</p>
+                </div>
+            </div>
+
+            <div className="flex justify-between items-center p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                <div>
+                    <h3 className="font-bold text-xl">Let's work together</h3>
+                    <p className="text-muted-foreground">I'm currently open for new opportunities.</p>
+                </div>
+                <a href="/contact" className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <ArrowRight />
+                </a>
+            </div>
+        </motion.div>
+    );
+}
