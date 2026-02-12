@@ -1,13 +1,13 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useLocation, Route, Switch, Link } from "wouter";
-import { useState } from "react";
-import { About } from "./About";
-import { Skills } from "./Skills";
-import { Projects } from "./Projects";
-import { Contact } from "./Contact";
-import { Achievements } from "./Achievements";
 import { cn } from "@/lib/utils";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { useState } from "react";
+import { Link, Route, Switch, useLocation } from "wouter";
+import { About } from "./About";
+import { Achievements } from "./Achievements";
+import { Contact } from "./Contact";
+import { Projects } from "./Projects";
+import { Skills } from "./Skills";
 // import /logo.pngfrom "@assets/hero.jpg";
 
 export function Home() {
@@ -34,13 +34,13 @@ export function Home() {
     const [imageError, setImageError] = useState(false);
 
     return (
-        <div className="min-h-screen flex flex-col md:flex-row items-stretch overflow-hidden">
+        <div className="min-h-screen flex flex-col md:flex-row items-stretch ">
 
             {/* Dynamic Hero Section */}
             <motion.div
                 layout
                 className={cn(
-                    "flex flex-col justify-center z-10 transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
+                    "flex flex-col justify-center transition-all z-20 duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
                     isHome
                         ? "w-full min-h-screen items-center pt-24 md:pt-0"
                         : "w-full md:w-[400px] lg:w-[500px] min-h-auto md:min-h-screen md:fixed md:top-0 md:left-0 border-b md:border-b-0 md:border-r border-border/10 bg-background/5 backdrop-blur-sm pt-24 md:pt-0"
@@ -49,7 +49,7 @@ export function Home() {
                 <motion.div
                     layout
                     className={cn(
-                        "flex flex-col gap-2",
+                        "flex flex-col gap-0.5",
                         isHome ? "items-center text-center max-w-4xl px-4 pt-[5rem]" : "items-start text-left px-8 md:pl-12 md:pt-32"
                     )}
                 >
@@ -80,11 +80,11 @@ export function Home() {
                         <motion.h1
                             layoutId="hero-name"
                             className={cn(
-                                "font-display font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/70",
-                                isHome ? "text-5xl md:text-7xl lg:text-8xl" : "text-3xl md:text-5xl"
+                                "font-display font-bold tracking-tighter !leading-[1.2] text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/70",
+                                isHome ? "text-5xl md:text-7xl lg:text-8xl" : "text-3xl md:text-5xl "
                             )}
                         >
-                            Krithika
+                            Krithika Shettigar
                         </motion.h1>
 
                         <motion.p
@@ -106,7 +106,7 @@ export function Home() {
                         )}
                     >
                         I craft digital experiences that blend aesthetic beauty with technical precision.
-                        Specializing in React ecosystems, creative interactions, and AI integrations.
+                        Specializing in React ecosystems, creative interactions and AI integrations.
                     </motion.p>
 
                     <motion.div
@@ -114,10 +114,9 @@ export function Home() {
                         className="flex gap-4 mt-2"
                     >
                         {[
-                            { icon: Github, href: "https://github.com" },
-                            { icon: Linkedin, href: "https://linkedin.com" },
-                            { icon: Twitter, href: "https://twitter.com" },
-                            { icon: Mail, href: "mailto:hello@example.com" }
+                            { icon: Github, href: "https://github.com/KrithikaHS" },
+                            { icon: Linkedin, href: "https://www.linkedin.com/in/krithika-h-shettigar/" },
+                            { icon: Mail, href: "mailto:krithikahs14@gmail.com" }
                         ].map((social, i) => (
                             <a
                                 key={i}
@@ -150,10 +149,10 @@ export function Home() {
 
             {/* Content Area */}
             <div className={cn(
-                "flex-1 relative z-10 min-h-screen transition-all duration-700",
-                isHome ? "opacity-0 pointer-events-none absolute right-0 w-0" : "opacity-100 w-full md:pl-[400px] lg:pl-[500px]"
+                "flex-1 relative min-h-screen transition-all duration-700",
+                isHome ? "hidden" : "opacity-100 w-full md:pl-[400px] lg:pl-[500px]"
             )}>
-                <main className="p-4 md:p-12 lg:p-16 pt-28 md:pt-32 max-w-5xl mx-auto">
+                <main className="p-4 md:p-12  pt-28 md:pt-32 max-w-5xl mx-auto">
                     <AnimatePresence mode="wait">
                         <Switch>
                             <Route path="/about" component={About} />

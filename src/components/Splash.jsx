@@ -35,7 +35,7 @@ export function Splash({ onComplete }) {
                     transition={{ duration: 3 }}
                 >
                     <div className="text-[15vw] font-black leading-none text-foreground whitespace-nowrap -rotate-12">
-                        FULL STACK UI/UX AI/ML
+                        FULL STACK UI/UX <br></br> AI/ML UI/UX AI/ML <br></br> FULL STACK AI/ML
                     </div>
                 </motion.div>
 

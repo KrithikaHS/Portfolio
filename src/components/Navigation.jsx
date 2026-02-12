@@ -1,7 +1,7 @@
-import { Link, useLocation } from "wouter";
-import { motion } from "framer-motion";
-import { Home, User, Code, Briefcase, Mail, Github, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Award, Briefcase, Code, Github, Home, Mail, User } from "lucide-react";
+import { Link, useLocation } from "wouter";
 import { Logo } from "./Logo";
 
 const links = [
@@ -9,7 +9,7 @@ const links = [
     { href: "/about", label: "About", icon: User },
     { href: "/skills", label: "Skills", icon: Code },
     { href: "/projects", label: "Projects", icon: Briefcase },
-    { href: "/achievements", label: "Achievements", icon: Award },
+    { href: "/achievements", label: "Experience & Achievements", icon: Award },
     { href: "/contact", label: "Contact", icon: Mail },
 ];
 
@@ -59,7 +59,7 @@ export function Navigation() {
                 <div className="w-px h-6 bg-border mx-2 hidden md:block" />
 
                 <a
-                    href="https://github.com"
+                    href="https://github.com/KrithikaHS"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 text-muted-foreground hover:text-foreground transition-colors hover:bg-muted/50 rounded-full"

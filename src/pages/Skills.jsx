@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import { skills } from "@/data/skills";
-import { Code2, Database, Layout, Terminal, Cpu, PenTool } from "lucide-react";
+import { motion } from "framer-motion";
+import { Code, Database, Layers, Layout, Terminal } from "lucide-react";
 
 export function Skills() {
     // Use static data instead of API
@@ -21,10 +21,11 @@ export function Skills() {
     };
 
     const categories = [
-        { id: "frontend", label: "Frontend", icon: Layout },
-        { id: "backend", label: "Backend", icon: Database },
-        { id: "tools", label: "Tools", icon: Terminal },
-        { id: "ai", label: "AI & ML", icon: Cpu },
+        { id: "languages", label: "Programming Languages", icon: Code },
+        { id: "frameworks", label: "Frameworks & Libraries", icon: Layers },
+        { id: "web", label: "Web Technologies", icon: Layout },
+        { id: "databases", label: "Databases", icon: Database },
+        { id: "tools", label: "Tools & Platforms", icon: Terminal },
     ];
 
     return (

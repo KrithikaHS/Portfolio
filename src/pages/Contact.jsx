@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
 import { Loader2, Send } from "lucide-react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 // Schema for form validation
 const contactSchema = z.object({
@@ -114,11 +114,11 @@ export function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="glass-panel p-6 rounded-2xl text-center">
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-muted-foreground text-sm">krithika@example.com</p>
+                    <p className="text-muted-foreground text-sm">krithikahs14@gmail.com</p>
                 </div>
                 <div className="glass-panel p-6 rounded-2xl text-center">
                     <h3 className="font-bold mb-1">Location</h3>
-                    <p className="text-muted-foreground text-sm">San Francisco, CA</p>
+                    <p className="text-muted-foreground text-sm">Karnataka, India</p>
                 </div>
             </div>
         </motion.div>
