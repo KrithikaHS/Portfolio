@@ -1,7 +1,6 @@
 import { useToast } from "@/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { Loader2, Send } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -52,7 +51,7 @@ export function Contact() {
                 </p>
             </div>
 
-            <div className="glass-panel p-8 rounded-3xl">
+            {/* <div className="glass-panel p-8 rounded-3xl">
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="space-y-2">
                         <label htmlFor="name" className="text-sm font-medium ml-1">Name</label>
@@ -109,7 +108,7 @@ export function Contact() {
                         )}
                     </button>
                 </form>
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="glass-panel p-6 rounded-2xl text-center">
