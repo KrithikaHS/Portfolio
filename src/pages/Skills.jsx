@@ -64,27 +64,27 @@ export function Skills() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {catSkills.map((skill) => (
-                                    <motion.div
-                                        key={skill.name}
-                                        variants={item}
-                                        className="glass-panel p-4 rounded-xl flex items-center gap-4 group hover:border-primary/50 transition-colors"
-                                    >
-                                        <div className="flex-1">
-                                            <div className="flex justify-between mb-2">
-                                                <span className="font-medium">{skill.name}</span>
-                                                <span className="text-sm text-muted-foreground">{skill.proficiency}%</span>
-                                            </div>
-                                            <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
-                                                <motion.div
-                                                    initial={{ width: 0 }}
-                                                    whileInView={{ width: `${skill.proficiency}%` }}
-                                                    transition={{ duration: 1, ease: "easeOut" }}
-                                                    className="h-full bg-gradient-to-r from-primary to-accent"
-                                                />
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
+    <motion.div
+        key={skill.name}
+        variants={item}
+        className="glass-panel p-4 rounded-xl flex items-center justify-between group hover:border-primary/50 transition-colors"
+    >
+        <span className="font-medium">{skill.name}</span>
+
+        <span
+            className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                skill.level === "Advanced"
+                    ? "bg-green-500/10 text-green-500"
+                    : skill.level === "Intermediate"
+                    ? "bg-yellow-500/10 text-yellow-500"
+                    : "bg-gray-500/10 text-gray-400"
+            }`}
+        >
+            {skill.level}
+        </span>
+    </motion.div>
+))}
+
                             </div>
                         </div>
                     );
