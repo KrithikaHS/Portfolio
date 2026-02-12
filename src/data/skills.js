@@ -1,28 +1,28 @@
 export const skills = [
     // Programming Languages
-    { id: 1, name: "Python", category: "languages", proficiency: 85, icon: "SiPython" },
-    { id: 2, name: "JavaScript", category: "languages", proficiency: 80, icon: "SiJavascript" },
-    { id: 2, name: "C", category: "languages", proficiency: 70, icon: "SiC" },
-    { id: 2, name: "Java", category: "languages", proficiency: 50, icon: "SiJava" },
+    { id: 1, name: "Python", category: "languages", level: "Intermediate", icon: "SiPython" },
+    { id: 2, name: "JavaScript", category: "languages", level: "Intermediate", icon: "SiJavascript" },
+    { id: 3, name: "C", category: "languages", level: "Intermediate", icon: "SiC" },
+    { id: 4, name: "Java", category: "languages", level: "Beginner", icon: "SiJava" },
 
     // Frameworks & Libraries
-    { id: 3, name: "React.js", category: "frameworks", proficiency: 95, icon: "SiReact" },
-    { id: 4, name: "Flask", category: "frameworks", proficiency: 80, icon: "SiFlask" },
-    { id: 5, name: "Django", category: "frameworks", proficiency: 78, icon: "SiDjango" },
-    { id: 6, name: "Tailwind CSS", category: "frameworks", proficiency: 95, icon: "SiTailwindcss" },
+    { id: 5, name: "React.js", category: "frameworks", level: "Intermediate", icon: "SiReact" },
+    { id: 6, name: "Flask", category: "frameworks", level: "Intermediate", icon: "SiFlask" },
+    { id: 7, name: "Django", category: "frameworks", level: "Intermediate", icon: "SiDjango" },
+    { id: 8, name: "Tailwind CSS", category: "frameworks", level: "Intermediate", icon: "SiTailwindcss" },
 
     // Web Technologies
-    { id: 7, name: "HTML5", category: "web", proficiency: 92, icon: "SiHtml5" },
-    { id: 8, name: "CSS3", category: "web", proficiency: 90, icon: "SiCss3" },
+    { id: 9, name: "HTML5", category: "web", level: "Advanced", icon: "SiHtml5" },
+    { id: 10, name: "CSS3", category: "web", level: "Advanced", icon: "SiCss3" },
 
     // Databases
-    { id: 9, name: "MySQL", category: "databases", proficiency: 82, icon: "SiMysql" },
-    { id: 10, name: "SQLite", category: "databases", proficiency: 80, icon: "SiSqlite" },
+    { id: 11, name: "MySQL", category: "databases", level: "Intermediate", icon: "SiMysql" },
+    { id: 12, name: "SQLite", category: "databases", level: "Intermediate", icon: "SiSqlite" },
 
     // Tools & Platforms
-    { id: 12, name: "Github", category: "tools", proficiency: 88, icon: "SiGithub" },
-    { id: 12, name: "VScode", category: "tools", proficiency: 88, icon: "SiVScode" },
-    { id: 13, name: "Salesforce", category: "tools", proficiency: 75, icon: "SiSalesforce" },
-    { id: 14, name: "Figma", category: "tools", proficiency: 90, icon: "SiFigma" },
-    { id: 15, name: "Canva", category: "tools", proficiency: 85, icon: "SiCanva" },
+    { id: 13, name: "GitHub", category: "tools", level: "Intermediate", icon: "SiGithub" },
+    { id: 14, name: "VS Code", category: "tools", level: "Advanced", icon: "SiVScode" },
+    { id: 15, name: "Salesforce", category: "tools", level: "Intermediate", icon: "SiSalesforce" },
+    { id: 16, name: "Figma", category: "tools", level: "Intermediate", icon: "SiFigma" },
+    { id: 17, name: "Canva", category: "tools", level: "Advanced", icon: "SiCanva" },
 ];
