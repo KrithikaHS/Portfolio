@@ -29,15 +29,21 @@ export function About() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-primary">
-                    <h3 className="text-xl font-bold mb-2">Design Philosophy</h3>
-                    <p className="text-muted-foreground">Minimalism with purpose. Every pixel should serve a function while delighting the user.</p>
-                </div>
-                <div className="glass-panel p-6 rounded-2xl border-l-4 border-l-accent">
-                    <h3 className="text-xl font-bold mb-2">Engineering Approach</h3>
-                    <p className="text-muted-foreground">Clean, modular code. Performance is a feature, not an afterthought.</p>
-                </div>
+            <div className="glass-panel p-8 rounded-3xl space-y-6 text-lg leading-relaxed text-muted-foreground">
+                    <h3 className="text-2xl font-bold mb-4">Download My Resume</h3>
+        <p className="text-muted-foreground mb-6">
+            A comprehensive snapshot of my technical expertise, project experience, and professional journey. 
+            Download the resume to explore my skills, achievements, and the value I bring to impactful teams.
+        </p>
+
+        <a
+            href="/Krithika H S.pdf"
+            download
+            className="inline-block px-6 py-3 rounded-xl bg-primary text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+        >
+            Download Resume
+        </a>
+                
             </div>
 
             <div className="flex justify-between items-center p-6 bg-primary/5 rounded-2xl border border-primary/10">
