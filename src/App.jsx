@@ -1,16 +1,17 @@
-import { useState } from "react";
-import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Splash } from "./components/Splash";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Analytics } from "@vercel/analytics/react";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { Route, Switch } from "wouter";
 import { Background } from "./components/Background";
 import { Navigation } from "./components/Navigation";
+import { Splash } from "./components/Splash";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { queryClient } from "./lib/queryClient";
 import { Home } from "./pages/Home";
 import NotFound from "./pages/not-found";
-import { AnimatePresence } from "framer-motion";
 
 function Router() {
     return (
@@ -58,6 +59,7 @@ function App() {
                     </AnimatePresence>
                 </div>
             </TooltipProvider>
+            <Analytics />
         </QueryClientProvider>
     );
 }
